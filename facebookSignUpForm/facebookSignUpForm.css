@@ -9,3 +9,39 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  position: relative;
+  background-color: thistle;
+}
+
+main > form {
+  background-color: #e5eaed;
+  width: 20%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+form > [type="text"] {
+  width: 49%;
+}
+
+form > [type="text"]:nth-child(2) {
+  position: relative;
+  left: 0.3rem;
+}
+
+form > [placeholder] {
+  padding: 0.3rem;
+}
+
+form > [placeholder="Email"],
+[placeholder="New Password"] {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
