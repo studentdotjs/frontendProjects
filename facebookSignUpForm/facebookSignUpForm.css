@@ -8,40 +8,77 @@
 
 html {
   font-size: 62.5%;
+  --headingFont: "Montserrat", sans-serif;
+  --normalTextFont: "Merriweather", serif;
+  --normalTextFontSize: 1.4rem;
 }
 
 body {
   position: relative;
-  background-color: thistle;
-}
-
-main > form {
   background-color: #e5eaed;
-  width: 20%;
+}
+
+main {
+  width: 306px;
   margin: 0 auto;
-  padding: 1rem;
+  transform: translateY(50%);
 }
 
-form > [type="text"] {
-  width: 49%;
+h1 {
+  font-family: var(--headingFont);
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
 }
 
-form > [type="text"]:nth-child(2) {
+body,
+form > select,
+[value],
+::placeholder {
+  font-family: var(--normalTextFont);
+}
+
+form > input[type="text"] {
+  width: 150px;
+}
+
+form > input[placeholder] {
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+  border: 0.1rem solid #d4dbe6;
+  border-radius: 0.4rem;
+}
+
+form > input[placeholder]:focus {
+  outline-color: #f00000;
+}
+
+form input:nth-child(2) {
   position: relative;
-  left: 0.3rem;
+  left: 0.5rem;
 }
 
-form > [placeholder] {
-  padding: 0.3rem;
+form > input:nth-child(3),
+input:nth-child(4) {
+  width: 306px;
 }
 
-form > [placeholder="Email"],
-[placeholder="New Password"] {
-  width: 100%;
+form > p:last-of-type {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: var(--normalTextFontSize);
 }
 
 footer {
   text-align: center;
+}
+
+footer > span {
   position: fixed;
   bottom: 0;
+  font-size: var(--normalTextFontSize);
+  font-style: italic;
+  font-weight: 700;
 }
