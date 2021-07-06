@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 html {
@@ -16,25 +17,39 @@ html {
 body {
   position: relative;
   background-color: #e5eaed;
+  height: 100vh;
+}
+
+body,
+form > select,
+form > input[value],
+::placeholder {
+  font-family: var(--normalTextFont);
 }
 
 main {
   width: 306px;
-  margin: 0 auto;
-  transform: translateY(50%);
+  height: 338px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-h1 {
+main > h1 {
   font-family: var(--headingFont);
   margin-bottom: 0.5rem;
   font-size: 3rem;
 }
 
-body,
-form > select,
-[value],
-::placeholder {
-  font-family: var(--normalTextFont);
+main > p {
+  font-size: var(--normalTextFontSize);
+}
+
+main > p,
+main > form > p {
+  margin-bottom: 1rem;
 }
 
 form > input[type="text"] {
@@ -62,23 +77,49 @@ input:nth-child(4) {
   width: 306px;
 }
 
-form > p:last-of-type {
-  font-size: 1rem;
+form > p:nth-of-type(1),
+p:nth-of-type(2) {
+  position: relative;
+  top: 0.5rem;
+  color: #aaa5a6;
+  font-weight: bolder;
+  font-size: 1.2rem;
 }
 
-p {
-  margin-bottom: 1rem;
+form > label {
   font-size: var(--normalTextFontSize);
+  margin-left: 1.1rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+form > label:nth-of-type(1) {
+  position: relative;
+  left: -0.2rem;
+}
+
+form > label > span {
+  padding: 0.3rem;
+}
+
+form > p:last-of-type {
+  font-size: 0.8rem;
+  width: 85%;
+}
+
+form > select {
+  padding: 0.4rem;
 }
 
 footer {
   text-align: center;
 }
 
-footer > span {
+footer > p {
   position: fixed;
   bottom: 0;
   font-size: var(--normalTextFontSize);
   font-style: italic;
   font-weight: 700;
+  display: inline-block;
 }
