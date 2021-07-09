@@ -12,7 +12,7 @@
 
     <meta
       name="keywords"
-      content="facebook, fb, facebook account, create facebook account"
+      content="facebook, fb, facebook account, create facebook account, facebbok sign up form"
     />
 
     <meta
@@ -52,7 +52,13 @@
 
         <input type="email" placeholder="Email" required />
 
-        <input type="password" placeholder="New Password" required />
+        <input
+          type="password"
+          placeholder="New Password"
+          minlength="3"
+          maxlength="8"
+          required
+        />
 
         <p>Birthday</p>
 
@@ -72,7 +78,6 @@
         </select>
 
         <select>
-          <option>18</option>
           <option>1</option>
           <option>2</option>
           <option>3</option>
@@ -90,6 +95,7 @@
           <option>15</option>
           <option>16</option>
           <option>17</option>
+          <option selected>18</option>
           <option>19</option>
           <option>20</option>
           <option>21</option>
@@ -141,17 +147,23 @@
         <p>Gender</p>
 
         <label for="female">
-          <input type="radio" name="gender" id="female" checked />
+          <input
+            type="radio"
+            name="gender"
+            value="female"
+            id="female"
+            checked
+          />
           <span>Female</span>
         </label>
 
         <label for="male">
-          <input type="radio" name="gender" id="male" />
+          <input type="radio" name="gender" value="male" id="male" />
           <span>Male</span>
         </label>
 
         <label for="custom">
-          <input type="radio" name="gender" id="custom" />
+          <input type="radio" name="gender" value="other" id="custom" />
           <span>Custom</span>
         </label>
 
@@ -159,10 +171,15 @@
 
         <p>
           By clicking Sign Up, you agree to our
-          <a href="#" target="_blank">Terms</a>,
-          <a href="#" target="_blank">Data Policy</a> and
-          <a href="#" target="_blank">Cookies Policy</a>. You may receive SMS
-          Notifications from us and can opt out any time.
+          <a href="https://www.facebook.com/terms.php" target="_blank">Terms</a
+          >,
+          <a href="https://www.facebook.com/policy.php" target="_blank"
+            >Data Policy</a
+          >
+          and
+          <a href="https://www.facebook.com/policies/cookies" target="_blank"
+            >Cookies Policy</a
+          >. You may receive SMS Notifications from us and can opt out any time.
         </p>
 
         <input type="submit" value="Sign Up" />

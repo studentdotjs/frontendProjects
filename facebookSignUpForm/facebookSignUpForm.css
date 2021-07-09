@@ -24,9 +24,9 @@ body {
 
 /* Font Family for the Normal Text Elements */
 body,
+form > input[placeholder],
 form > select,
-form > input[value],
-::placeholder {
+form > input[value] {
   font-family: var(--normalTextFont);
 }
 
@@ -53,9 +53,18 @@ main > p {
   margin-bottom: 1.4rem;
 }
 
+form {
+  width: 100%;
+}
+
 /* Form Tag's First 4 Input's Styling */
 form > input[type="text"] {
   width: 150px;
+  transition: width 1s ease-in-out;
+}
+
+form > input[type="text"]:focus {
+  width: 100%;
 }
 
 form > input[placeholder] {
@@ -67,12 +76,10 @@ form > input[placeholder] {
 
 form > input[placeholder]:focus {
   outline-color: #f00000;
-  font-family: var(--normalTextFont);
 }
 
-form input:nth-child(2) {
-  position: relative;
-  left: 0.5rem;
+form > input:first-child {
+  margin-right: 0.35rem;
 }
 
 form > input:nth-child(3),
@@ -95,7 +102,7 @@ p:nth-of-type(2) {
 }
 
 form > p:nth-of-type(2) {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 form > p:last-of-type {
@@ -155,6 +162,7 @@ form > input[type="submit"]:hover {
   background-color: #fff;
   border-color: #fff;
   letter-spacing: 0.2rem;
+  border: 0.1rem solid #68a54c;
 }
 
 /* Footer Styling */
