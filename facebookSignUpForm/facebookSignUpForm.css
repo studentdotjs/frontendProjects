@@ -30,15 +30,16 @@ form > input[value] {
   font-family: var(--normalTextFont);
 }
 
-/* Main Tag Styling */
+/* Main Tag's Styling */
 main {
   width: 306px;
-  height: 338px;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  padding: 0 0.5rem;
 }
 
 /* Main Tag's Children Styling */
@@ -53,13 +54,14 @@ main > p {
   margin-bottom: 1.4rem;
 }
 
+/* Form's Styling */
 form {
   width: 100%;
 }
 
-/* Form Tag's First 4 Input's Styling */
+/* Form's First 4 Input's Styling */
 form > input[type="text"] {
-  width: 150px;
+  width: 49%;
   transition: width 1s ease-in-out;
 }
 
@@ -75,19 +77,19 @@ form > input[placeholder] {
 }
 
 form > input[placeholder]:focus {
-  outline-color: #f00000;
+  outline-color: #ff0000;
 }
 
 form > input:first-child {
-  margin-right: 0.35rem;
+  margin-right: 0.35%;
 }
 
 form > input:nth-child(3),
 input:nth-child(4) {
-  width: 306px;
+  width: 100%;
 }
 
-/* Form Tag's Paragraph Tag's Styling */
+/* Form's Paragraph's Styling */
 form > p:nth-of-type(1) {
   margin-bottom: 1rem;
   position: relative;
@@ -111,15 +113,18 @@ form > p:last-of-type {
   margin-bottom: 1.5rem;
 }
 
-/* Dropdown List's Styling */
+/* Form's Dropdown List's Styling */
 form > select {
-  padding: 0.5rem;
+  padding: 0.4rem;
   font-size: 1.1rem;
   margin-bottom: 0.7rem;
+  border: 1px solid #e1e3eb;
 }
 
 form > select:nth-of-type(2) {
   width: 5rem;
+  position: relative;
+  left: 0.1rem;
 }
 
 form > i {
@@ -128,7 +133,7 @@ form > i {
   color: #686b73;
 }
 
-/* Radio Button's Styling */
+/* Form's Radio Button's Styling */
 form > label {
   font-size: var(--normalTextFontSize);
   margin-left: 1.1rem;
@@ -145,7 +150,7 @@ form > label > span {
   padding: 0.3rem;
 }
 
-/* Sign Up Button Styling */
+/* Form's Sign Up Button Styling */
 form > input[type="submit"] {
   width: 15.5rem;
   height: 3rem;
@@ -154,12 +159,12 @@ form > input[type="submit"] {
   border: 0.5rem solid #68a54c;
   border-radius: 0.4rem;
   transition: all 1s ease-in;
+  margin-bottom: 0.5rem;
 }
 
 form > input[type="submit"]:hover {
   color: #68a54c;
   background-color: #fff;
-  border-color: #fff;
   letter-spacing: 0.2rem;
   border: 0.1rem solid #68a54c;
 }
@@ -176,6 +181,19 @@ footer > p {
   font-style: italic;
   font-weight: 700;
   display: inline-block;
+}
+
+/* Media Queries */
+@media (max-width: 320px) {
+  main {
+    width: 100%;
+  }
+}
+
+@media (max-height: 385px) {
+  main {
+    height: 100%;
+  }
 }
 
 @media (max-height: 450px) {
