@@ -9,4 +9,7 @@
 
 html {
   font-size: 62.5%;
+  --headingFont: "Montserrat", sans-serif;
+  --normalTextFont: "Merriweather", serif;
+  --normalTextFontSize: 1.4rem;
 }
