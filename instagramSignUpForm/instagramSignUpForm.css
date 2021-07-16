@@ -13,3 +13,116 @@ html {
   --normalTextFont: "Merriweather", serif;
   --normalTextFontSize: 1.4rem;
 }
+
+body {
+  background-color: #fafafa;
+}
+
+main {
+  background-color: #ffffff;
+}
+
+main > section:first-child {
+  width: 350px;
+  border: 0.1rem solid #dbdbdb;
+  margin: 4rem auto 0.5rem auto;
+  padding: 2.5rem 4rem;
+  text-align: center;
+}
+
+section:first-child > h1 {
+  font-size: 3.5rem;
+  font-family: var(--headingFont);
+  padding: 0.5rem 0rem;
+  margin-bottom: 1rem;
+  transition: all 0.5s ease-in;
+}
+
+section:first-child > h1:hover {
+  letter-spacing: 0.5rem;
+  color: rgba(219, 219, 219, 0.18);
+  border-radius: 0.5rem;
+  text-shadow: 0.2rem 0.2rem 0rem #ff3ccb;
+  box-shadow: 0.1rem 0.1rem 0.2rem 0.2rem #d4dbe7;
+}
+
+section:first-child > p:nth-of-type(1) {
+  color: #90959b;
+  font-size: var(--normalTextFontSize);
+  font-family: var(--normalTextFont);
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  line-height: 2rem;
+}
+
+section:first-child > button {
+  width: 100%;
+  color: #ffffff;
+  background-color: #0095f6;
+  font-family: var(--normalTextFont);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.6rem 0rem;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+section:first-child > button > i {
+  font-size: 1.8rem;
+  position: relative;
+  right: 0.8rem;
+  top: 0.2rem;
+}
+
+section:first-child > span {
+  color: #959698;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-family: 1.3rem;
+  font-size: 1.2rem;
+}
+
+section:first-child > span::after {
+  content: "";
+}
+
+section:first-child > form > input[placeholder] {
+  width: 100%;
+  font-family: var(--normalTextFont);
+  font-size: 1rem;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  background-color: #fafafa;
+  border: 0.1rem solid #eeeeee;
+  outline: none;
+}
+
+section:first-child > form > input:nth-of-type(4) {
+  margin-bottom: 1.5rem;
+}
+
+section:first-child > form > input:last-of-type {
+  font-family: var(--normalTextFont);
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  color: #ffffff;
+  background-color: #b2dffc;
+  margin-bottom: 2rem;
+  cursor: not-allowed;
+}
+
+section:first-child > p:last-of-type {
+  font-family: var(--normalTextFont);
+  font-size: 1rem;
+  color: #8e9cbd;
+  padding: 0rem 1rem;
+  line-height: 1.7rem;
+}
+
+section:first-child > p:last-of-type > a {
+  color: #8e8e8e;
+  font-weight: bold;
+}
